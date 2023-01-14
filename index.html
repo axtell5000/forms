@@ -5,11 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <form action="/" method="GET">
-      <input type="text" name="message" />
+      <label for="name">Your name</label>
+      <input type="text" name="user-name" id="name" />
+      <label for="age">Your age</label>
+      <input type="number" step="4" name="age" id="age" />
+      <label for="email">Your email</label>
+      <input type="email" name="email" id="email" />
+      <label for="password">Your password</label>
+      <input type="password" name="password" id="password" />
+      <label for="birthdate">Your birthdate</label>
+      <input type="date" name="birthdate" id="birthdate" />
+      <hr />
+      <h2>How should we verify your account?</h2>
+      <div class="form-control-inline">
+        <input
+          type="radio"
+          name="verify-method"
+          id="verify-text"
+          value="text-message"
+        />
+        <label for="verify-text">Via text message(SMS)</label>
+      </div>
+      <div class="form-control-inline">
+        <input
+          type="radio"
+          name="verify-method"
+          id="verify-phone"
+          value="phone"
+        />
+        <label for="verify-phone">Via a phone call</label>
+      </div>
+      <div class="form-control-inline">
+        <input
+          type="radio"
+          name="verify-method"
+          id="verify-email"
+          value="email"
+        />
+        <label for="verify-email">Via email</label>
+      </div>
       <button>Submit</button>
     </form>
   </body>
